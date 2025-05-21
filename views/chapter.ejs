@@ -1,0 +1,35 @@
+<%- include("header.ejs") %>
+    <div class="chapter-f">
+        <div class="chapter-no chapter-no-main">
+            CHAPTER-<%= chapter.chapter_number %>
+        </div>
+        <div class="chapter-name-main">
+            <%=chapter.name_translated%>
+        </div>
+        <div class="chapter-con">
+            <%=chapter.chapter_summary%>
+        </div>
+        <div class="chapter-name-main">
+            <%=chapter.name%>
+        </div>
+        <div class="chapter-con">
+            <%=chapter.chapter_summary_hindi%>
+        </div>
+    </div>
+    <div class="verses">
+        <div class="verse-count">
+            <%=verses.length%> Verses
+        </div>
+        <div class="verse-container">
+            <% verses.forEach(verse=>{ %>
+                <a href="/chapter/<%= verse.chapter_number %>/verse/<%= verse.verse_number %>/" class="blocks">
+                    <div class="verse-tag">Verse <%= verse.verse_number %>
+                    </div>
+                    <div class="verse-dis">
+                        <%= verse.translations[4].description %>
+                    </div>
+                </a>
+
+                <% }) %>
+        </div>
+    </div>

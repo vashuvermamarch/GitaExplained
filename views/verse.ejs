@@ -1,0 +1,14 @@
+<%- include("header.ejs") %>
+
+<div class="whole-verse">
+    <h1 class="shlok-no">BG<%=verse.chapter_number%>.<%=verse.verse_number%></h1>
+    <div class="shlok"><%=verse.text%></div>
+    <div class="shlok-eng"><%=verse.transliteration%></div>
+    <div class="word-mean"><%=verse.word_meanings%></div>
+    <img src="/images/Screenshot 2025-05-21 090401.png" alt="desing">
+    <h1>Translation</h1>
+    <div class="translation"><%= verse.translations[2].description %></div>
+    <h1>Commentary</h1>
+    <div class="commentary"><%=verse.commentaries[verse.commentaries.length-1].description%></div>
+</div>
+ 

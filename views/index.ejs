@@ -1,0 +1,48 @@
+<%- include("header.ejs") %>
+    <div class="main">
+        <div class="front">
+            <h1>Shrimad Bhagvat Geeta</h1>
+            <p>The sermon given by Lord Krishna to Arjun just before the start of the Mahabharata war is known as
+                Shrimad Bhagwat Gita . It is a part of the Bhishma Parva of the Mahabharata . The Gita has 18 chapters
+                and 700 verses. The Gita is counted among the Prasthanatrayi , which also includes the Upanishads and
+                Brahmasutras . Therefore, according to the Indian tradition, the Gita has the same place as the
+                Upanishads and Dharmasutras . The Upanishads have been called cow (cow) and the Gita its milk. This
+                means that the spiritual knowledge of the Upanishads is accepted by the Gita in its entirety. Many
+                knowledges of the Upanishads are in the Gita. For example, Ashwattha Vidya regarding the nature of the
+                world, Avyayapurush Vidya regarding the eternal unborn Brahma, Aksharpurush Vidya regarding Para
+                Prakriti or the living beings and Ksharpurush Vidya regarding Apara Prakriti or the physical world.
+                Thus, the specific content of both the Brahmavada of the Vedas and the spirituality of the Upanishads is
+                contained in the Gita. This is called Brahmavidya in the words of Pushpika. </p>
+
+
+            <p>During the Mahabharata war, when Arjuna refuses to fight, Shri Krishna preaches him and makes him aware
+                of the true knowledge of karma and dharma. These teachings of Shri Krishna have been collected in a book
+                called Shrimad Bhagwat Geeta.</p>
+            <div class="readmore-p">
+                <div class="readmore">
+                    <a href="https://en.wikipedia.org/wiki/Bhagavad_Gita">Read More</a>
+                </div>
+            </div>
+        </div>
+        <h1 class="hedding">Bhagavad Gita Chapters</h1>
+        <div class="chapters">
+            <% result.forEach(chapter=> { %>
+                <form method="GET" action="chapter/<%= chapter.chapter_number %>/">
+                    <button class="card" type="submit" >
+                        <div class="chapter-no">
+                            Chapter-number : <%= chapter.chapter_number %>
+                        </div>
+                        <div class="chapter-name">
+                            <%= chapter.name %>
+                        </div>
+                        <div class="chapter-english">
+                            <%= chapter.name_translated %>
+                        </div>
+                    </button>
+                </form>
+                <% }); %>
+        </div>
+    </div>
+    </body>
+
+    </html>
