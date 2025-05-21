@@ -1,1 +1,3 @@
 # GitaExplained
+
+this is practice website where API is used to fetch data like chapters data and verse data...
